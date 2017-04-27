@@ -1,8 +1,8 @@
 from character.base import Character
 
 class Hero(Character):
-    def __init__ (self, name='Becky', health=10, power=5, coins=10):
-        super().__init__(name, health, power, coins)
+    def __init__ (self, name='Becky', health=10, power=5, evade=0, coins=10):
+        super().__init__(name, health, power, evade, coins)
 
     @classmethod
     def create(cls):

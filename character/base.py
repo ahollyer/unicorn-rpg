@@ -2,11 +2,12 @@ import time
 import random
 
 class Character:
-    def __init__(self, name, health, power, coins):
+    def __init__(self, name, health, power, evade, coins):
         self.name = name
         self.max_health = health
         self.health = health
         self.power = power
+        self.evade = evade
         self.coins = coins
 
     def attack(self, target):
@@ -28,5 +29,18 @@ class Character:
     def alive(self):
         return self.health > 0
 
-    def print_status(self):
-        print("{} has {} health and {} power.".format(self.name, self.health, self.power))
+    def print_status(self, hud=False):
+        if hud:
+            print("""
+            *~~* {}'s stats *~~*
+            ------------------------
+            Health: {} out of {}
+            Power: {}
+            Evade: {}
+            Wallet: {} coins
+            """.format(
+                self.name, self.health, self.max_health,
+                self.power, self.evade, self.coins))
+        else:
+            print("{} has {} health and {} power".format(
+                self.name, self.health, self.power))
