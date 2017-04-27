@@ -3,6 +3,7 @@
 import random
 import time
 
+from image import *
 from scene import *
 
 from character.hero import *
@@ -16,6 +17,13 @@ class Tonic:
         print("{}'s health increased to {}.".format(character.name, character.health))
 
 if __name__ == "__main__":
+    for word in text.title:
+        print(word)
+        time.sleep(1)
+    time.sleep(1)
+    print(text.subtitle)
+    time.sleep(1)
+
     hero = Hero()
     enemies = [Enemy(), Enemy("JimBob", 5, 5)]
     battle_engine = battleground.Battle()
