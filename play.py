@@ -15,9 +15,12 @@ def print_title():
     for word in image.text.title:
         print(word)
         time.sleep(1)
+    time.sleep(2)
+    print('\n\n\n', image.text.subtitle)
     time.sleep(1)
-    print(image.text.subtitle)
-    time.sleep(1)
+    for i in range(40):
+        print('')
+        time.sleep(0.2)
 
 if __name__ == "__main__":
 
@@ -29,11 +32,15 @@ if __name__ == "__main__":
     shopping_engine = scene.store.Store()
 
     # Intro Scene
-    scene.bridge.play_scene(hero)
+    choice = scene.bridge.play_scene(hero)
+    if choice == 1:
+        scene.forest.play_scene(hero)
+    elif choice == 2:
+        scene.mountains.play_scene(hero)
 
     # Level 1
     for enemy in enemies:
-        hero_won = battleground.do_battle(hero, enemy)
+        hero_won = scene.battleground.do_battle(hero, enemy)
         if not hero_won:
             print("YOU LOSE!")
             exit(0)

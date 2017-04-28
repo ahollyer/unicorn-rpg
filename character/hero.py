@@ -1,5 +1,7 @@
 import time
 
+import image
+
 from character.base import Character
 
 class Hero(Character):
@@ -8,6 +10,7 @@ class Hero(Character):
 
     @classmethod
     def create(cls):
+        print(image.char.pixie)
         print("""\nPIXIE:
         Welcome to FairyLand! I'm the gumdrop pixie, and I
         brought you here using sprinkle magic. We've been waiting many
