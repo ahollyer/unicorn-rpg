@@ -5,7 +5,7 @@ import image
 from character.base import Character
 
 class Hero(Character):
-    def __init__ (self, name='Becky', health=10, power=5, evade=0, coins=10):
+    def __init__ (self, name='Becky', health=10, power=5, attack='gore', evade=0, coins=10):
         super().__init__(name, health, power, evade, coins)
 
     @classmethod

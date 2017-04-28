@@ -1,7 +1,6 @@
 import time
 
 import image
-import scene.battleground
 
 def pause():
     time.sleep(2)
@@ -18,9 +17,9 @@ def play_scene(hero):
     time.sleep(2.5)
     print("\n\tWell, I'm sure you'll figure it out. Bye!")
     pause()
-    pause()
 
     print(image.char.pixie)
+    time.sleep(1)
     for c in image.thing.poof:
         time.sleep(0.5)
         print(("\r" + ("\033[A\033[K" * 6)) + c, end="")

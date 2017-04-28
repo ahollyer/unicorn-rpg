@@ -2,12 +2,10 @@
 
 import random
 import time
-import scene.battleground
-import scene.bridge
-import scene.store
 
 import image
 
+from scene import *
 from character.hero import *
 from character.enemies import *
 
@@ -28,19 +26,19 @@ if __name__ == "__main__":
     print_title()
 
     hero = Hero.create()
-    enemies = [Enemy(), Enemy("JimBob", 5, 5)]
-    shopping_engine = scene.store.Store()
+    enemies = [Enemy("a Vicious T-Rex"), Enemy("JimBob", 5, 5)]
+    shopping_engine = store.Store()
 
     # Intro Scene
-    choice = scene.bridge.play_scene(hero)
+    choice = bridge.play_scene(hero)
     if choice == 1:
-        scene.forest.play_scene(hero)
+        forest.play_scene(hero)
     elif choice == 2:
-        scene.mountains.play_scene(hero)
+        mountains.play_scene(hero)
 
     # Level 1
     for enemy in enemies:
-        hero_won = scene.battleground.do_battle(hero, enemy)
+        hero_won = battleground.do_battle(hero, enemy)
         if not hero_won:
             print("YOU LOSE!")
             exit(0)

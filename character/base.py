@@ -2,11 +2,12 @@ import time
 import random
 
 class Character:
-    def __init__(self, name, health, power, evade, coins):
+    def __init__(self, name, health, power, attack, evade, coins):
         self.name = name
         self.max_health = health
         self.health = health
         self.power = power
+        self.attack = attack
         self.evade = evade
         self.coins = coins
 
@@ -17,8 +18,8 @@ class Character:
             target.health -= self.power * 2
         else:
             target.health -= self.power
-        print("{} does {} damage to {}.".format(
-            self.name, self.power, target.name))
+        print("{} {}s {} for {} damage.".format(
+            self.name, self.attack, target.name, self.power))
         if target.health <= 0:
             print("{} is dead.".format(target.name))
             time.sleep(1)

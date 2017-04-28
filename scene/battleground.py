@@ -6,7 +6,7 @@ from character import *
 def do_battle(hero, enemy):
     print("\n\n\n")
     print(divider.divs[0])
-    print("{} faces the {}".format(hero.name, enemy.name))
+    print("{} faces {}".format(hero.name, enemy.name))
     print(divider.divs[0])
     while hero.alive() and enemy.alive():
         hero.print_status()

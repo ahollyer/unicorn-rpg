@@ -1,1 +1,1 @@
-__all__ = ["battleground", "bridge", "store"]
+__all__ = ["battleground", "bridge", "forest", "mountains", "store"]
