@@ -6,7 +6,7 @@ def pause():
     time.sleep(2)
 
 def play_scene(hero):
-    print("{} heads east.".format(hero.name))
+    print("{} heads east.\n".format(hero.name))
 
     for i in range(6):
         #print(image.char.unicorn_right[0])
@@ -19,4 +19,7 @@ def play_scene(hero):
     pause()
     print("\nOh no! A dinosaur! Who knew FairyLand could be so dangerous?")
     pause()
-    print("Luckily, {}'s blood-spattered horn proves she is no stranger to battle.".format(hero.name))
+    print("""Luckily, {}'s blood-spattered horn proves she is no stranger
+    to battle.""".format(hero.name))
+    pause()
+    print(image.char.unicorn_left[1])

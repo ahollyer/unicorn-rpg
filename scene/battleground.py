@@ -19,7 +19,7 @@ def do_battle(hero, enemy):
         print("4. Check stats")
         ans = input("> ")
         if ans == '1':
-            hero.attack(enemy)
+            hero.fight(enemy)
         elif ans == '2':
             pass
         elif ans == '3':
@@ -32,7 +32,7 @@ def do_battle(hero, enemy):
             This ain't Burger King. You can't 'have it your way', {}.
             PICK ONE OF THE OPTIONS I GAVE YOU!!""".format(hero.name))
             continue
-        enemy.attack(hero)
+        enemy.fight(hero)
     if hero.alive():
         print("{} defeated the {}".format(hero.name, enemy.name))
         return True

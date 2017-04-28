@@ -11,7 +11,7 @@ class Character:
         self.evade = evade
         self.coins = coins
 
-    def attack(self, target):
+    def fight(self, target):
         crit_dice = random.random()
         if crit_dice > 0.6:
             print("Critical hit!")
