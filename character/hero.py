@@ -1,3 +1,5 @@
+import time
+
 from character.base import Character
 
 class Hero(Character):
@@ -6,7 +8,13 @@ class Hero(Character):
 
     @classmethod
     def create(cls):
-        name = input("What's your name, hero?: ")
+        print("""\nPIXIE:
+        Welcome to FairyLand! I'm the gumdrop pixie, and I
+        brought you here using sprinkle magic. We've been waiting many
+        centuries for a magical unicorn princess like you.
+        """)
+        time.sleep(1.5)
+        name = input("What's your name, princess? ").upper()
         return cls(name)
 
     def buy(self, item):
