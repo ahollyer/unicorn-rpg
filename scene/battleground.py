@@ -12,7 +12,7 @@ def do_battle(hero, enemy):
         hero.print_status()
         enemy.print_status()
         time.sleep(1.5)
-        print(divider.divs[0])
+        print("\n" + divider.divs[0])
         print("1. Fight {}".format(enemy.name))
         print("2. Do nothing")
         print("3. Flee")
