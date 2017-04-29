@@ -29,17 +29,15 @@ def play_scene(hero):
 
     print("\033[A\033[K" * 5)
 
-    print("\nThe gumdrop pixie vanishes in a puff of glitter.")
+    print("The gumdrop pixie vanishes in a puff of glitter.")
     input('> ')
-    print("\n{} looks around.".format(hero.name))
+    print("{} looks around.".format(hero.name))
     input('> ')
-    print("\n\n\nOff to the east lies an ominous-looking lollipop forest,")
-    input('> ')
+    print("To the right lies an ominous-looking lollipop forest,")
     print(image.thing.lollipop_forest)
     input('> ')
-    print("\n\nand to the west, a range of steep, treacherous candy mountains")
+    print("and to the left, a range of steep, treacherous candy mountains")
     print("with summits covered in ice cream.")
-    input('> ')
     print(image.thing.ice_cream_mountains)
     input('> ')
 
