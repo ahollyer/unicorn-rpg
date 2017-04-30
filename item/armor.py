@@ -7,8 +7,11 @@ class Shirt(Item):
         self.pause()
         print("{} puts on {}.".format(hero.name, self.name))
         self.pause()
-        print("~ * . . . . * ~")
-        self.pause()
+
+        for i in range(3):
+            print("~ * ... * ~")
+            self.pause()
+
         hero.max_health += 2
         hero.health += 2
         print("{}'s health increases to {} out of {}!".format(
@@ -21,7 +24,10 @@ class Boots(Item):
         self.pause()
         print("{} puts on {}.".format(hero.name, self.name))
         self.pause()
-        print("~~~ * . . ~~.~~ . . * ~~~")
-        self.pause()
+
+        for i in range(3):
+            print("~ * ... * ~")
+            self.pause()
+
         hero.evade += 2
         print("{}'s evade increases to {}!".format(hero.name, hero.evade))

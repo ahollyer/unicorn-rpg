@@ -1,13 +1,15 @@
+import random
 import time
 
 from image import *
 from character import *
 
 def do_battle(hero, enemy):
+    rand = random.randint(0, len(text.fight_msgs) - 1)
     print("\n")
-    print("\b" + text.fight)
+    print(text.fight_msgs[rand])
     print(divider.divs[1])
-    print("\t{} vs. {}".format(hero.name, enemy.name))
+    print("  {} vs. {}".format(hero.name, enemy.name))
     print(divider.divs[1])
     time.sleep(0.8)
 
@@ -67,6 +69,7 @@ def do_battle(hero, enemy):
              {} lives to fight another day. She gallops onward.
             *===========================================================*
             """.format(hero.name, enemy.name))
+            input("> ")
         else:
             hero.win_count += 1
             print("""
@@ -75,6 +78,7 @@ def do_battle(hero, enemy):
              of {} to rot in the sun.
             *===========================================================*
             """.format(hero.name, enemy.name))
+            input("> ")
         return True
     else:
         return False

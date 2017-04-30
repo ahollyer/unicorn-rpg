@@ -16,17 +16,23 @@ class Character:
     def fight(self, target):
         crit_dice = random.random()
         if crit_dice > 0.6:
-            print("Critical hit!")
-            target.health -= self.power * 2
+            crit = self.power * 2
+            print("** CRITICAL HIT:")
+            target.health -= crit
+            print("{} {}s {} for {} damage.".format(
+            self.name, self.attack, target.name, crit))
         else:
             target.health -= self.power
-        print("{} {}s {} for {} damage.".format(
+            print("{} {}s {} for {} damage.".format(
             self.name, self.attack, target.name, self.power))
         if target.health <= 0:
             print("{} is dead.".format(target.name))
             time.sleep(1)
-            print("\n{} loots the corpse and retrieves {} coins".format(
-                self.name, target.coins))
+            print("""
+   .--.
+  ( ${} ) {} loots the corpse and retrieves {} coins.
+   '--'
+            """.format(target.coins, self.name, target.coins))
             self.coins += target.coins
 
     def alive(self):

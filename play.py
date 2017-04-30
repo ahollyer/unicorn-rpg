@@ -26,7 +26,11 @@ if __name__ == "__main__":
     print_title()
 
     hero = Hero.create()
-    enemies = [Enemy("A Vicious T-Rex"), Enemy("JimBob", 5, 5)]
+    enemies = [
+        Enemy("An Angry Triceratops", 6, 2, "maul", 0, 5),
+        Enemy("A Hungry Velociraptor", 6, 4, "swipe", 2, 5),
+        Enemy("A Vicious T-Rex", 7, 5, "bite", 0, 8)
+    ]
     shopping_engine = store.Store()
 
     # Intro Scene
@@ -37,11 +41,15 @@ if __name__ == "__main__":
         mountains.play_scene(hero)
 
     # Level 1
+    battle_counter = 0
     for enemy in enemies:
+        print(image.char.enemies[battle_counter])
+        battle_counter += 1
+        input("> ")
         hero_won = battleground.do_battle(hero, enemy)
         if not hero_won:
             print("YOU LOSE!")
             exit(0)
-        shopping_engine.shop(hero)
+        shopping_engine.go_shopping(hero)
 
     print("YOU WIN!")
