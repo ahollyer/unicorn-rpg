@@ -9,7 +9,7 @@ def do_battle(hero, enemy):
     print(divider.divs[1])
     print("\t{} vs. {}".format(hero.name, enemy.name))
     print(divider.divs[1])
-    time.sleep(0.5)
+    time.sleep(0.8)
 
     while hero.alive() and enemy.alive():
         print("")
@@ -29,15 +29,20 @@ def do_battle(hero, enemy):
             print("4. See {}'s traits".format(hero.name))
             ans = input("> ")
             if ans == '1':
+                print("\n" + divider.divs[2])
                 enemy.fight(hero)
                 hero.fight(enemy)
+                print(divider.divs[2])
                 waiting = False
             elif ans == '2':
-                print("\n{}: Use me as a punching bag!!".format(hero.name))
+                print("")
+                print(divider.divs[2])
+                print("{}: Use me as a punching bag!!".format(hero.name))
                 time.sleep(0.5)
                 print("{} stands dumbly, waiting to be hit.\n".format(hero.name))
                 time.sleep(1)
                 enemy.fight(hero)
+                print(divider.divs[2])
                 time.sleep(0.5)
                 waiting = False
             elif ans == '3':
@@ -57,17 +62,17 @@ def do_battle(hero, enemy):
     if hero.alive():
         if ans == '3':
             print("""
-            \b*===========================================================*
-            \b {} lives to fight another day, and gallops onward.
-            \b*===========================================================*
+            *===========================================================*
+             {} lives to fight another day. She gallops onward.
+            *===========================================================*
             """.format(hero.name, enemy.name))
         else:
             hero.win_count += 1
             print("""
-            \b*===========================================================*
-            \b {} emerges victorious. She trots away, leaving the corpse
-            \b of {} to rot in the sun.
-            \b*===========================================================*
+            *===========================================================*
+             {} emerges victorious. She trots away, leaving the corpse
+             of {} to rot in the sun.
+            *===========================================================*
             """.format(hero.name, enemy.name))
         return True
     else:
