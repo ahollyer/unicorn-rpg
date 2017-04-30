@@ -1,5 +1,7 @@
-import time
 import random
+import time
+
+import image
 
 class Character:
     def __init__(self, name, health, power, attack, evade, coins):
@@ -32,16 +34,20 @@ class Character:
 
     def print_status(self, hud=False):
         if hud:
+            print(image.char.unicorn)
             print("""
-            *~~* {}'s stats *~~*
-            ------------------------
-            Health: {} out of {}
-            Power: {}
-            Evade: {}
-            Wallet: {} coins
+            >>>>>-----------*-----------<<<<<
+                    *~-~* Traits *~-~*
+            >>>>>-----------*-----------<<<<<
+              * HEALTH: {} out of {}
+              * POWER: {}
+              * EVADE: {}
+              * WALLET: {} coins
+              * KILLS: {} foes slain
+            >>>>>-----------*-----------<<<<<
             """.format(
-                self.name, self.health, self.max_health,
-                self.power, self.evade, self.coins))
+                self.health, self.max_health, self.power,
+                self.evade, self.coins, self.win_count))
         else:
             print("{} has {} health and {} power".format(
                 self.name, self.health, self.power))
