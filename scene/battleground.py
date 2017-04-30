@@ -30,8 +30,9 @@ def do_battle(hero, enemy):
             ans = input("> ")
             if ans == '1':
                 print("\n" + divider.divs[2])
-                enemy.fight(hero)
                 hero.fight(enemy)
+                if enemy.alive():
+                    enemy.fight(hero)
                 print(divider.divs[2])
                 waiting = False
             elif ans == '2':
@@ -76,5 +77,4 @@ def do_battle(hero, enemy):
             """.format(hero.name, enemy.name))
         return True
     else:
-        print("YOU LOSE!")
         return False
