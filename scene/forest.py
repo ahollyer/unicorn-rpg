@@ -7,7 +7,7 @@ def pause():
 
 def play_scene(hero):
     print(image.divider.divs[1])
-    print("\t{} heads east.".format(hero.name))
+    print("{} heads toward The Lollipop Forest.".format(hero.name))
     print(image.divider.divs[1])
 
     print(image.char.unicorn_right[3])

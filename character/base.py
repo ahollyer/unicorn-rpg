@@ -49,5 +49,5 @@ class Character:
                 self.health, self.max_health, self.power,
                 self.evade, self.coins, self.win_count))
         else:
-            print("{} has {} health and {} power".format(
+            print("{} has {} health and {} power.".format(
                 self.name, self.health, self.power))

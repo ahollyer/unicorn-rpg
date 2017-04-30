@@ -43,7 +43,7 @@ def play_scene(hero):
 
     waiting = True
     while waiting:
-        print("\n1. Go right\n2. Go left\n")
+        print("\n1. Go towards Lollipop Forest\n2. Go towards Candy Mountains\n")
         ans = input('> ')
         if ans == '1':
             waiting = False
