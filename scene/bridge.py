@@ -22,9 +22,9 @@ def play_scene(hero):
     pause()
 
     print(image.char.pixie)
-    time.sleep(1)
+    time.sleep(0.7)
     for c in image.thing.poof:
-        time.sleep(0.4)
+        time.sleep(0.3)
         print(("\r" + ("\033[A\033[K" * 6)) + c, end="")
 
     print("\033[A\033[K" * 5)
@@ -43,7 +43,7 @@ def play_scene(hero):
 
     waiting = True
     while waiting:
-        print("\n1. Go east\n2. Go west\n")
+        print("\n1. Go right\n2. Go left\n")
         ans = input('> ')
         if ans == '1':
             waiting = False

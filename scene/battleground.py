@@ -5,14 +5,15 @@ from character import *
 
 def do_battle(hero, enemy):
     print("\n")
+    print("\b" + text.fight)
     print(divider.divs[1])
-    print("\t{} faces {}".format(hero.name, enemy.name))
+    print("\t{} vs. {}".format(hero.name, enemy.name))
     print(divider.divs[1])
     time.sleep(0.5)
 
     while hero.alive() and enemy.alive():
         print("")
-        print("*~-STATUS-~*")
+        print("*~- STATUS -~*")
         hero.print_status()
         enemy.print_status()
         print("")
@@ -21,11 +22,11 @@ def do_battle(hero, enemy):
         waiting = True
         while waiting:
             print("\n" + divider.divs[0])
-            print("~*-OPTIONS-*~")
+            print("~*- OPTIONS -*~")
             print("1. Fight {}".format(enemy.name))
             print("2. Do nothing")
             print("3. Flee")
-            print("4. See {}'s attributes".format(hero.name))
+            print("4. See {}'s traits".format(hero.name))
             ans = input("> ")
             if ans == '1':
                 enemy.fight(hero)
@@ -54,14 +55,19 @@ def do_battle(hero, enemy):
         if ans == '3':
             break
     if hero.alive():
-        if ans == '3'
+        if ans == '3':
             print("""
-            \b{} lives to fight another day, and gallops onward.
+            \b*===========================================================*
+            \b {} lives to fight another day, and gallops onward.
+            \b*===========================================================*
             """.format(hero.name, enemy.name))
         else:
+            hero.win_count += 1
             print("""
-            \b{} emerges victorious. She trots away, leaving the corpse of
-            \b{} to rot in the sun.
+            \b*===========================================================*
+            \b {} emerges victorious. She trots away, leaving the corpse
+            \b of {} to rot in the sun.
+            \b*===========================================================*
             """.format(hero.name, enemy.name))
         return True
     else:

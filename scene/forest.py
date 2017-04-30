@@ -3,7 +3,7 @@ import time
 import image
 
 def pause():
-    time.sleep(2)
+    time.sleep(1.5)
 
 def play_scene(hero):
     print(image.divider.divs[1])
@@ -26,10 +26,10 @@ def play_scene(hero):
     print("{} rears up and lets out a fearsome battle-neigh.".format(hero.name))
     pause()
 
-    print("\n\n\n\n", image.char.unicorn_left[0])
+    print("\n\n\n\n\n\n", image.char.unicorn_left[0])
     for i in range(2):
         for img in image.char.unicorn_left:
             time.sleep(0.3)
             print(("\r" + ("\033[A\033[K" * 9)) + img, end="")
 
-    input("> ")
+    input("\b\b\b\b> ")

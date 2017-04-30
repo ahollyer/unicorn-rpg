@@ -26,7 +26,7 @@ if __name__ == "__main__":
     print_title()
 
     hero = Hero.create()
-    enemies = [Enemy("a Vicious T-Rex"), Enemy("JimBob", 5, 5)]
+    enemies = [Enemy("A Vicious T-Rex"), Enemy("JimBob", 5, 5)]
     shopping_engine = store.Store()
 
     # Intro Scene
