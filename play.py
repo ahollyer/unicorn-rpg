@@ -48,8 +48,10 @@ if __name__ == "__main__":
         input("> ")
         hero_won = battleground.do_battle(hero, enemy)
         if not hero_won:
-            print("YOU LOSE!")
+            print("Rainbow blood pools around {}'s lifeless body".format(hero.name))
+            print("YOU LOSE!!")
             exit(0)
         shopping_engine.go_shopping(hero)
 
-    print("YOU WIN!")
+    print("THAT'S ALL FOR NOW!")
+    print("BYE!")
