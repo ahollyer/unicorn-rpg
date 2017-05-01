@@ -202,7 +202,7 @@ TRICERATOPS: GRRR! I am very mad!
 
 A velociraptor leaps out of nowhere, hissing and brandishing its talons.
 
-VELOCIRAPTOR: Get out of FairyLand, intruder!
+VELOCIRAPTOR: Get out of FairyLand, buttface!
 """,
 """
                                                ____
