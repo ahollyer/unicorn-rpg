@@ -8,20 +8,20 @@ from item.tonics import *
 from item.weapons import *
 
 class Store:
-    shirt = Shirt(
-        "A Ragged Tunic", 5,
-        "This tunic has seen better days. It will provide some protection.")
+    bridle = Shirt(
+        "A Bloodstained Bridle", 5,
+        "Once the armor of some mighty battle-horse, its magic is almost used up. It should provide some benefit, though.")
     supercandy = Tonic(
         "SuperCandy", 5,
-        "This candy tastes like dirty socks, but it will restore a lot of health!")
+        "This so-called candy tastes like dirty socks, but it will restore a lot of health!")
     boots = Boots(
         "Sneaky Boots", 10,
-        "These boots will make you light on your feet!")
-    sword = Sword(
-        "Rusty Sword", 8,
-        "This dull-as-a-butter-knife blade has seen better days. It might deal more damage than your bare fists, though.")
+        "These boots will make you light on your feet! Well, hooves.")
+    dagger = Blade(
+        "Rusty Dagger", 8,
+        "This dull-as-a-butter-knife blade has seen better days. Duct tape it to your horn to deal a little extra damage.")
 
-    items = [shirt, supercandy, boots, sword]
+    items = [bridle, supercandy, boots, dagger]
 
     def go_shopping(self, hero):
         print(image.divider.divs[1])
@@ -36,7 +36,7 @@ class Store:
                 print(("\r" + ("\033[A\033[K" * 8)) + img, end="")
 
         rand = random.randint(0, len(image.char.merchants) - 1)
-        print("\nA traveling merchant appears!")
+        print("\nA friendly salesman appears!")
         time.sleep(0.3)
         print(image.char.merchants[rand])
         ans = input("> ")
