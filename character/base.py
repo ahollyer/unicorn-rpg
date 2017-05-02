@@ -13,18 +13,38 @@ class Character:
         self.evade = evade
         self.coins = coins
 
-    def fight(self, target):
-        crit_dice = random.random()
-        if crit_dice > 0.6:
+    def alive(self):
+        return self.health > 0
+
+    def crit_check(self, target, dice):
+        if dice > 0.66:
             crit = self.power * 2
             print("** CRITICAL HIT:")
             target.health -= crit
             print("{} {}s {} for {} damage.".format(
             self.name, self.attack, target.name, crit))
+            return True
+        return False
+
+    def evade_check(self, dice):
+        chance = dice * 10
+        if chance <= self.evade:
+            return True
+        return False
+
+    def fight(self, target):
+        roll_dice = random.random()
+        if target.evade_check(roll_dice):
+            print("{} {}s {} . . .".format(
+                self.name, self.attack, target.name))
+            time.sleep(0.7)
+            print("{} dodges!".format(target.name))
         else:
-            target.health -= self.power
-            print("{} {}s {} for {} damage.".format(
-            self.name, self.attack, target.name, self.power))
+            roll_dice = random.random()
+            if not self.crit_check(target, roll_dice):
+                target.health -= self.power
+                print("{} {}s {} for {} damage.".format(
+                self.name, self.attack, target.name, self.power))
         if target.health <= 0:
             print("{} is dead.".format(target.name))
             time.sleep(1)
@@ -35,8 +55,6 @@ class Character:
             """.format(target.coins, self.name, target.coins))
             self.coins += target.coins
 
-    def alive(self):
-        return self.health > 0
 
     def print_status(self, hud=False):
         if hud:

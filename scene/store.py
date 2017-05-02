@@ -10,16 +10,16 @@ from item.weapons import *
 class Store:
     bridle = Shirt(
         "A Bloodstained Bridle", 5,
-        "Once the armor of some mighty battle-horse, its magic is almost used up. It should provide some benefit, though.")
+        "Once the armor of some mighty battle-horse, its magic is almost used up. It should provide some benefit, though.", image.thing.bloodstained_bridle)
     supercandy = Tonic(
         "SuperCandy", 5,
-        "This so-called candy tastes like dirty socks, but it will restore a lot of health!")
+        "This so-called candy tastes like dirty socks, but it will restore a lot of health!", image.thing.super_candy)
     boots = Boots(
         "Sneaky Boots", 10,
-        "These boots will make you light on your feet! Well, hooves.")
+        "These boots will make you light on your feet! Well, hooves.", image.thing.sneaky_boots)
     dagger = Blade(
         "Rusty Dagger", 8,
-        "This dull-as-a-butter-knife blade has seen better days. Duct tape it to your horn to deal a little extra damage.")
+        "This dull-as-a-butter-knife blade has seen better days. Duct tape it to your horn to deal a little extra damage.", image.thing.rusty_dagger)
 
     items = [bridle, supercandy, boots, dagger]
 
@@ -50,6 +50,7 @@ class Store:
             print("What do you want to do?\n")
             for i in range(len(Store.items)):
                 item = Store.items[i]
+                print(item.img)
                 print("{}. Buy {} ({} coins) - {}\n".format(i + 1, item.name, item.cost, item.desc))
             print("10. leave")
 
