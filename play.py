@@ -29,7 +29,8 @@ if __name__ == "__main__":
     enemies = [
         Enemy("An Angry Triceratops", 6, 2, "maul", 0, 5),
         Enemy("A Hungry Velociraptor", 6, 4, "swipe", 2, 5),
-        Enemy("A Vicious T-Rex", 7, 5, "bite", 0, 8)
+        Enemy("A Vicious T-Rex", 10, 5, "bite", 0, 8),
+        Enemy("Boss: Fairy Satan", 15, 5, "stab", 2, 10)
     ]
     shopping_engine = store.Store()
 
@@ -49,7 +50,7 @@ if __name__ == "__main__":
         hero_won = battleground.do_battle(hero, enemy)
         if not hero_won:
             print("Rainbow blood pools around {}'s lifeless body".format(hero.name))
-            print("YOU LOSE!!")
+            print("FAIRIES FOREVER!! YOU LOSE!")
             exit(0)
         shopping_engine.go_shopping(hero)
 
