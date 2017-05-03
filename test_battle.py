@@ -30,7 +30,7 @@ if __name__ == "__main__":
         Enemy("An Angry Triceratops", 6, 2, "maul", 0, 5),
         Enemy("A Hungry Velociraptor", 6, 4, "swipe", 2, 5),
         Enemy("A Vicious T-Rex", 10, 5, "bite", 0, 8),
-        Enemy("Boss: Fairy Satan", 15, 5, "stab", 2, 10)
+        Enemy("Boss: Fairy Satan", 15, 5, "stab", 2, 9)
     ]
     shopping_engine = store.Store()
 

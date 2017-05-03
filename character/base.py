@@ -50,9 +50,9 @@ class Character:
             time.sleep(1)
             print("""
    .--.
-  ( ${} ) {} loots the corpse and retrieves {} coins.
+  ( ${} ) {} loots {}'s corpse and retrieves {} coins.
    '--'
-            """.format(target.coins, self.name, target.coins))
+            """.format(target.coins, self.name, target.name, target.coins))
             self.coins += target.coins
 
 
