@@ -13,7 +13,7 @@ def print_title():
     for word in image.text.title:
         print(word)
         time.sleep(1)
-    time.sleep(2)
+    time.sleep(1)
     print('\n\n\n', image.text.subtitle)
     time.sleep(1)
     for i in range(40):
@@ -54,5 +54,6 @@ if __name__ == "__main__":
             exit(0)
         shopping_engine.go_shopping(hero)
 
+    print("YOU WIN THIS ROUND!")
     print("THAT'S ALL FOR NOW!")
     print("BYE!")
