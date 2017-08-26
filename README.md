@@ -14,12 +14,12 @@ For me, this project is an ongoing lesson in the fundamentals of programming. It
 
 ## Challenges
 
-This is my first attempt at Object-Oriented Programming and also my first attempt at building a large program in Python. It's been a great learning experience, but many areas of the game are still poorly written and need to be refactored.
+This is my first attempt at Object-Oriented Programming and also my first attempt at building a large program in Python. It's been a great learning experience, but of course it is still far from complete.
 
 * **Learning to organize code in separate files**
   - Throughout writing the game, I struggled to understand when to split code into its own function, much less its own class or module.
   - After refactoring several times, the code is becoming much more organized and readable, with separate directories for ASCII art assets, character modules, item modules, and scene modules.
-  - More work still needs to be done.
+  - I'm still learning OOP basics. It's getting clearer though!
 
 
 * **DRY, DRY, DRY**
