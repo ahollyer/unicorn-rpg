@@ -14,7 +14,7 @@ def print_fight_intro(hero, enemy):
 
 def print_battle_options(hero, enemy):
     print("\n" + divider.divs[0])
-    print("~*- OPTIONS -*~")
+    # print("~*~ OPTIONS ~*~")
     print("1. Fight {}".format(enemy.name))
     print("2. Do nothing")
     print("3. Flee")
@@ -22,7 +22,7 @@ def print_battle_options(hero, enemy):
 
 def print_status(hero, enemy):
     print("")
-    print("~~-~~ STATUS ~~-~~")
+    print("*****************************\n\tSTATUS\n*****************************")
     hero.print_status()
     enemy.print_status()
     print("")

@@ -1,6 +1,5 @@
 import random
 import time
-
 import image
 
 class Character:
@@ -73,5 +72,5 @@ class Character:
                 self.health, self.max_health, self.power,
                 self.evade, self.coins, self.win_count))
         else:
-            print("{} has {} health and {} power.".format(
+            print("""{}:\n* {} health\n* {} power\n""".format(
                 self.name, self.health, self.power))
