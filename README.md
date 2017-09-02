@@ -46,8 +46,8 @@ This is my first attempt at Object-Oriented Programming and also my first attemp
 - [ ] Switch out items randomly in the store
 - [ ] Add Level 2
 - [ ] Add inventory/ability to use items in battle
-- [ ] Randomize merchant appearance
-- [ ] Create a bank of enemies
+- [x] Randomize merchant appearance
+- [x] Create a bank of enemies
 - [ ] Choose or generate random enemies based on current level
 
 --------------------------------------------------------------------------------
