@@ -12,10 +12,10 @@ For me, this project is an ongoing lesson in the fundamentals of programming. It
 
 --------------------------------------------------------------------------------
 
-## How to PLay
+## How to Play
 
 1. Clone/download the repository.
-2. Open your terminal and cd into the 'unicorn-rpg' directory
+2. Open your terminal and ```$ cd``` into the 'unicorn-rpg' directory
 3. ```$ python3 play.py``` to start the game.
 
 --
