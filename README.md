@@ -30,7 +30,7 @@ This is my first attempt at Object-Oriented Programming and also my first attemp
   - After refactoring several times, the code is becoming much more organized and readable, with separate directories for ASCII art assets, character modules, item modules, and scene modules.
   - I'm still learning OOP basics. It's getting clearer though!
 
-- **DRY, DRY, DRY**
+- **What's this DRY stuff?**
 
   - As I learned how to split code into modules, I realized I was either importing my modules into each other all the time, or rewriting simple functions. At this point, it became clear that I was doing something wrong. I've learned a couple of strategies to help:
 
