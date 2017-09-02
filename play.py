@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
-
 import random
 import time
-
 import image
-
 from scene import *
 from character.hero import *
 from character.enemies import *
@@ -21,10 +18,8 @@ def print_title():
         time.sleep(0.2)
 
 if __name__ == "__main__":
-
     # Initialize Game
     print_title()
-
     hero = Hero.create()
     enemies = [
         Enemy("An Angry Triceratops", 6, 2, "maul", 0, 5),

@@ -1,5 +1,4 @@
 import time
-
 import image
 
 def pause():
